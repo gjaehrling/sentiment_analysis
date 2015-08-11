@@ -18,7 +18,7 @@ import zipimport
 
 importer = zipimport.zipimporter('nltkandyaml.mod')
 yaml = importer.load_module('yaml')
-nltk = importer.load_module('nltk')
+#nltk = importer.load_module('nltk')
 
 # get the existing POS tags from nltk help: 
 # nltk.help.upenn_tagset()
@@ -76,8 +76,8 @@ for line in sys.stdin:
             # 4. Phase chunking:
             tree = cp.parse(tagged)
             # uncomment the next lines to display the tree
-#            print tree
-#            tree.draw()
+            print tree
+            tree.draw()
  
             # initialize variables:
             noun = posExpression = negExpression = posSuperlative = negSuperlative = ""
